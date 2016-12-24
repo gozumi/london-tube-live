@@ -5,6 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
+    "ng-build": "ng build --prod",
     "start": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
@@ -14,8 +15,9 @@
     "open-docs": "open docs/index.html",
     "convert-lcov": "sed 's/SF:.*!/SF:/' reports/coverage/lcov.info > reports/coverage/lcov-converted.info",
     "sonar-scanner": "npm run convert-lcov; sonar-scanner",
-    "deploy-develop": "ng build; firebase use develop; firebase deploy",
-    "sw-precache-prod": "sw-precache --config=config/sw-precache/sw-precache-config.prod.js --verbose",
+    "build-and-deploy-dev": "npm-run-all -s ng-build sw-precache-prod deploy-dev",
+    "deploy-dev": "firebase use develop; firebase deploy",
+    "sw-precache-prod": "cp src/manifest.json dist/.; cp -r src/scripts dist/.; cp src/manifest.json dist/.; sw-precache --config=config/sw-precache/sw-precache-config.prod.js --verbose",
     "sw-precache-dev": "sw-precache --config=config/sw-precache/sw-precache-config.dev.js --verbose"
   },
   "private": true,
@@ -54,6 +56,7 @@
     "karma-nyan-reporter": "^0.2.4",
     "karma-remap-istanbul": "^0.2.1",
     "karma-spec-reporter": "0.0.26",
+    "npm-run-all": "^3.1.2",
     "protractor": "~4.0.13",
     "sw-precache": "^4.2.3",
     "ts-node": "1.2.1",
