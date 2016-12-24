@@ -1,13 +1,13 @@
 {
-  "name": "wave 49",
-  "short_name": "w49",
-  "icons": [{
-    "src": "/assets/images/icon-910x910.png",
-      "sizes": "910x910",
-      "type": "image/png"
+    "name": "London Tube Live",
+    "short_name": "LTL",
+    "icons": [{
+        "src": "/assets/images/icon-910x910.png",
+        "sizes": "910x910",
+        "type": "image/png"
     }],
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#666666",
-  "theme_color": "#666666"
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#666666",
+    "theme_color": "#666666"
 }
