@@ -38,3 +38,10 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+# generated reports & docs
+/docs
+/reports
+
+# SonarQube
+/.sonar

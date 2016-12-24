@@ -1,0 +1,29 @@
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.chart .axis text {
+  font: 10px sans-serif;
+}
+
+.chart .axis path,
+.chart .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.chart .bubble {
+    cursor: pointer;
+}
+
+svg.chart {
+    width: 100%;
+    height: 100%;
+}

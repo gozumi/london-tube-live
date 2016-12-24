@@ -9,7 +9,14 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "docs": "typedoc --experimentalDecorators --ignoreCompilerErrors --out docs/ src/app/index.ts --theme doc-themes/custom",
+    "open-docs": "open docs/index.html",
+    "convert-lcov": "sed 's/SF:.*!/SF:/' reports/coverage/lcov.info > reports/coverage/lcov-converted.info",
+    "sonar-scanner": "npm run convert-lcov; sonar-scanner",
+    "deploy-develop": "ng build; firebase use develop; firebase deploy",
+    "sw-precache-prod": "sw-precache --config=config/sw-precache/sw-precache-config.prod.js --verbose",
+    "sw-precache-dev": "sw-precache --config=config/sw-precache/sw-precache-config.dev.js --verbose"
   },
   "private": true,
   "dependencies": {
@@ -18,11 +25,15 @@
     "@angular/core": "^2.3.1",
     "@angular/forms": "^2.3.1",
     "@angular/http": "^2.3.1",
+    "@angular/material": "^2.0.0-beta.1",
     "@angular/platform-browser": "^2.3.1",
     "@angular/platform-browser-dynamic": "^2.3.1",
     "@angular/router": "^3.3.1",
+    "@types/d3": "^4.4.0",
+    "angularfire2": "^2.0.0-beta.6",
     "core-js": "^2.4.1",
-    "rxjs": "^5.0.1",
+    "d3": "^4.4.0",
+    "rxjs": "^5.0.2",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
   },
@@ -37,11 +48,18 @@
     "karma": "1.2.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
+    "karma-growl-reporter": "^1.0.0",
     "karma-jasmine": "^1.0.2",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-nyan-reporter": "^0.2.4",
     "karma-remap-istanbul": "^0.2.1",
+    "karma-spec-reporter": "0.0.26",
     "protractor": "~4.0.13",
+    "sw-precache": "^4.2.3",
     "ts-node": "1.2.1",
     "tslint": "^4.0.2",
+    "typedoc": "^0.5.1",
+    "typedoc-default-themes": "^0.4.1",
     "typescript": "~2.0.3"
   }
 }

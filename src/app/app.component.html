@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+    <img class="logo" src="/assets/images/logo-banner.svg" alt="">
+    <span class="fill-remaining-space"></span>
+    <button md-button [innerHTML]="'sign in'" (click)="signIn()"></button>
+    <button md-button [innerHTML]="'sign out'" (click)="signOut()"></button>
+</md-toolbar>
+<router-outlet></router-outlet>
+<md-toolbar class="bottom" color="primary">
+    <span>bottom toolbar</span>
+    <span class="fill-remaining-space"></span>
+    <button md-button [innerHTML]="'add'"></button>
+</md-toolbar>
