@@ -12,6 +12,7 @@ import 'd3-transition';
 import { scaleLinear, ScaleLinear } from 'd3-scale';
 import { json as d3Json } from 'd3-request';
 import { Journey } from '../../data/models/journey.interface';
+import { ArrivalStreamService } from '../../services/arrival-stream/arrival-stream.service';
 
 @Component({
     selector: 'app-overview',
@@ -28,7 +29,7 @@ export class OverviewComponent implements OnInit, OnChanges, AfterViewInit {
     private margin;
     private journeyVisualisation: Selection<any, {}, null, undefined>;
 
-    constructor() { }
+    constructor(private arrivals: ArrivalStreamService) { }
 
     ngOnInit() {
         this.margin = {
@@ -49,6 +50,9 @@ export class OverviewComponent implements OnInit, OnChanges, AfterViewInit {
             // .attr('height', this.height + this.margin.top + this.margin.bottom)
             .append('g')
             .attr('transform', `translate(${this.margin.left}, ${this.margin.top})`);
+
+        this.arrivals.get()
+            .subscribe(data => console.log(`length: ${data.length}`, data));
     }
 
     /**
@@ -59,11 +63,6 @@ export class OverviewComponent implements OnInit, OnChanges, AfterViewInit {
     }
 
     ngOnChanges(): void { }
-
-    private type(d) {
-        d.value = +d.value;
-        return d;
-    }
 
     /**
      * Render the chart
