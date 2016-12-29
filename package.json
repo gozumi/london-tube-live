@@ -13,8 +13,6 @@
     "e2e": "protractor",
     "docs": "typedoc --experimentalDecorators --ignoreCompilerErrors --out docs/ src/app/index.ts --theme doc-themes/custom",
     "open-docs": "open docs/index.html",
-    "convert-lcov": "sed 's/SF:.*!/SF:/' reports/coverage/lcov.info > reports/coverage/lcov-converted.info",
-    "sonar-scanner": "npm run convert-lcov; sonar-scanner",
     "build-and-deploy-dev": "npm-run-all -s ng-build sw-precache-prod deploy-dev",
     "deploy-dev": "firebase use develop; firebase deploy",
     "sw-precache-prod": "cp src/manifest.json dist/.; cp -r src/scripts dist/.; cp src/manifest.json dist/.; sw-precache --config=config/sw-precache/sw-precache-config.prod.js --verbose",
