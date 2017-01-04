@@ -2,6 +2,9 @@ import { AuthProviders, AuthMethods } from 'angularfire2';
 
 export const environment = {
     production: true,
+    endpoint: {
+        arrivals: 'https://api.tfl.gov.uk/line/jubilee/arrivals'
+    },
     firebase: {
         config: {
             apiKey: 'AIzaSyC0kCB-6SSTIBC_zqlIQctgq9e1qysk28Y',

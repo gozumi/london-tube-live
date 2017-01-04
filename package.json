@@ -1,6 +1,6 @@
 {
   "name": "london-tube-live",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -13,11 +13,9 @@
     "e2e": "protractor",
     "docs": "typedoc --experimentalDecorators --ignoreCompilerErrors --out docs/ src/app/index.ts --theme doc-themes/custom",
     "open-docs": "open docs/index.html",
-    "convert-lcov": "sed 's/SF:.*!/SF:/' reports/coverage/lcov.info > reports/coverage/lcov-converted.info",
-    "sonar-scanner": "npm run convert-lcov; sonar-scanner",
-    "build-and-deploy-dev": "npm-run-all -s ng-build sw-precache-prod deploy-dev",
+    "build-and-deploy-dev": "npm-run-all -s ng-build sw-precache-dist deploy-dev",
     "deploy-dev": "firebase use develop; firebase deploy",
-    "sw-precache-prod": "cp src/manifest.json dist/.; cp -r src/scripts dist/.; cp src/manifest.json dist/.; sw-precache --config=config/sw-precache/sw-precache-config.prod.js --verbose",
+    "sw-precache-dist": "cp src/manifest.json dist/.; cp -r src/scripts dist/.; cp src/manifest.json dist/.; sw-precache --config=config/sw-precache/sw-precache-config.prod.js --verbose",
     "sw-precache-dev": "sw-precache --config=config/sw-precache/sw-precache-config.dev.js --verbose"
   },
   "private": true,
@@ -35,6 +33,7 @@
     "angularfire2": "^2.0.0-beta.6",
     "core-js": "^2.4.1",
     "d3": "^4.4.0",
+    "hammerjs": "^2.0.8",
     "rxjs": "^5.0.2",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
@@ -42,6 +41,7 @@
   "devDependencies": {
     "@angular/compiler-cli": "^2.3.1",
     "@types/jasmine": "2.5.38",
+    "@types/lodash": "^4.14.44",
     "@types/node": "^6.0.42",
     "angular-cli": "1.0.0-beta.24",
     "codelyzer": "~2.0.0-beta.1",
@@ -56,6 +56,7 @@
     "karma-nyan-reporter": "^0.2.4",
     "karma-remap-istanbul": "^0.2.1",
     "karma-spec-reporter": "0.0.26",
+    "lodash": "^4.17.3",
     "npm-run-all": "^3.1.2",
     "protractor": "~4.0.13",
     "sw-precache": "^4.2.3",

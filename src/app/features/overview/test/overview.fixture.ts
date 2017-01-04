@@ -1,4 +1,3 @@
-import { Component, Input } from '@angular/core';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
@@ -6,6 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { OverviewComponent } from '../overview.component';
 import { StoreService } from '../../../data/store/store.service';
 import { AuthService } from '../../../services/auth/auth.service';
+import { ArrivalStreamService } from '../../../services/arrival-stream/arrival-stream.service';
 
 export class Fixture {
     testBedFixture: ComponentFixture<OverviewComponent>;
@@ -22,7 +22,8 @@ export class Fixture {
             ],
             providers: [
                 { provide: StoreService, useValue: true },
-                { provide: AuthService, useValue: true }
+                { provide: AuthService, useValue: true },
+                { provide: ArrivalStreamService, useValue: true },
             ]
         })
         .compileComponents();
