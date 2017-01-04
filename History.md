@@ -1,4 +1,11 @@
 
+0.0.2 / 2017-01-04
+==================
+
+  * issue-1 & 2: Add live data streaming read from the TFL api.
+  * Update the sonar properties file to include and exclude the correct files.
+  * Remove the sonarqube typescript workaraound.
+
 0.0.1 / 2016-12-24
 ==================
 
