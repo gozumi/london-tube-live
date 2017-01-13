@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { environment } from '../../../environments/environment';
+import { ValuesService } from '../../core/values/values.service';
 
 /**
  * This class creates an observable that emits the current status of the london tube network.
@@ -10,13 +10,14 @@ import { environment } from '../../../environments/environment';
 @Injectable()
 export class ArrivalStreamService {
     private stream: Observable<any>;
-    private url: string = environment.endpoint.arrivals;
+    private url: string;
 
     /**
      * The constructor simply receives the injected dependencies
      * @param http  The angular http service.
      */
-    constructor(private http: Http) {
+    constructor(private http: Http, values: ValuesService) {
+        this.url = values.endpoints.getArrivals(values.tflRoutes.jubilee);
         let interval = Observable.interval(120000)
             .flatMap(this.getData.bind(this));
 

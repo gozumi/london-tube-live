@@ -2,7 +2,7 @@ import { Fixture } from './arrival-stream.fixture';
 import { ArrivalStreamService } from '../arrival-stream.service';
 import { fakeAsync, tick, discardPeriodicTasks } from '@angular/core/testing';
 
-describe('ArrivalStreamService', () => {
+describe('service: ArrivalStreamService', () => {
     let fixture: Fixture;
     let arrivalStreamService: ArrivalStreamService;
 

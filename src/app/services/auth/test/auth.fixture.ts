@@ -3,7 +3,7 @@ import { AngularFire, FirebaseAuth } from 'angularfire2';
 import { AuthService } from '../auth.service';
 
 export class Fixture {
-    authService: any;
+    authService: AuthService;
 
     constructor() {
         TestBed.configureTestingModule({

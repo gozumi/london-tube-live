@@ -1,6 +1,6 @@
 import { Fixture } from './store.fixture';
 
-describe('Service: Store', () => {
+describe('service: Store', () => {
     beforeEach(() => {
         this.storeService = new Fixture().storeService;
     });

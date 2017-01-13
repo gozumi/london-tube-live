@@ -3,7 +3,7 @@
 import { async } from '@angular/core/testing';
 import { Fixture } from './overview.fixture';
 
-describe('Component: overview', () => {
+describe('component: overview', () => {
     beforeEach(() => {
         this.fixture = new Fixture().testBedFixture;
         this.component = this.fixture.componentInstance;

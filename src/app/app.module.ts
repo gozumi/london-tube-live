@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
 import { AuthModule } from './services/auth/auth.module';
 import { AppSerivcesModule } from './services/app-serivces.module';
@@ -19,6 +20,7 @@ import { appRouting, appRoutingProviders } from './app.routing';
         FormsModule,
         HttpModule,
         MaterialModule.forRoot(),
+        CoreModule,
         FeaturesModule,
         AuthModule,
         appRouting,

@@ -1,7 +1,7 @@
 import { async } from '@angular/core/testing';
 import { Fixture } from './app.component.fixture';
 
-describe('Component: app', () => {
+describe('component: app', () => {
     beforeEach(() => {
         this.fixture = new Fixture().testBedFixture;
         this.component = this.fixture.componentInstance;

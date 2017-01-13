@@ -7,8 +7,9 @@ import { AuthProviders, AuthMethods } from 'angularfire2';
 
 export const environment = {
     production: false,
-    endpoint: {
-        arrivals: 'https://api.tfl.gov.uk/line/jubilee/arrivals'
+    endpointPrefixes: {
+        arrivals: 'https://api.tfl.gov.uk/line/jubilee/arrivals',
+        tfl: 'https://api.tfl.gov.uk/'
     },
     firebase: {
         config: {

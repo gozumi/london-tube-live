@@ -2,7 +2,7 @@
 
 import { Fixture } from './auth.fixture';
 
-describe('Service: Store', () => {
+describe('service: AuthService', () => {
     beforeEach(() => {
         this.storeService = new Fixture().authService;
     });
