@@ -4,12 +4,12 @@
 
 ### Start the development server
 
-    npm run serve
+    yarn serve
 
 ### Code linting
 
-    npm run lint
+    yarn lint
 
 ### Create a release
 
-    npm run release
+    yarn release

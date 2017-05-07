@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { SignIn } from '../components/sign-in/sign-in.component'
 
 export interface HelloProps {
   compiler: string

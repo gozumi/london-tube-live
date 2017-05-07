@@ -1,8 +1,5 @@
-import { AuthState } from '../../types/enums'
-
 const DEFAULT_STATE: {} = {
-  authState: AuthState.SignedOut,
-  user: null
+  lines: {}
 }
 
 export default DEFAULT_STATE
