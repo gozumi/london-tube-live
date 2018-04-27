@@ -1,6 +1,13 @@
 {
-  "extends": "tslint-config-standard",
-  "rules": {
-    "space-before-function-paren": [false, "always"]
-  }
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:latest",
+        "tslint-react",
+        "tslint-config-standard",
+        "tslint-sonarts"
+    ],
+    "rules": {
+        "no-implicit-dependencies": false,
+        "no-submodule-imports": false
+    }
 }

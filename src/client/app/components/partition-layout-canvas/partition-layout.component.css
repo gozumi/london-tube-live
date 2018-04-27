@@ -1,0 +1,48 @@
+.partition-layout__drawing-area {
+  width: 100%;
+  height: 100%;
+}
+
+.partition-layout__arrow {
+  fill: #ffffff;
+  fill-opacity: .6;
+}
+
+.d3-partition-node__rect {
+  fill: #ffffff;
+}
+
+.d3-partition-node__rect--error {
+  fill: #ff0000;
+}
+
+.d3-partition-node__rect--success {
+  fill: #00ff00;
+}
+
+.d3-partition-node--internal {
+  fill-opacity: .2;
+  cursor: pointer;
+}
+
+.d3-partition-node--leaf {
+  fill-opacity: .4;
+}
+
+.d3-partition-node__text {
+  font-size: 13px;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.d3-partition-node__text--hidden {
+  font-size: 0;
+}
+
+.d3-partition-node--active {
+  fill-opacity: .29;
+}
+
+.d3-partition-node--dropable {
+  fill-opacity: .39;
+}

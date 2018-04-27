@@ -1,0 +1,30 @@
+.app {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "logo work-area"
+    "navigation work-area";
+
+  grid-template-columns: 5rem auto;
+  grid-template-rows: 7.5rem auto;
+}
+
+.feature {
+  grid-area: work-area;
+}
+
+.logo {
+  width: 5rem;
+  grid-area: logo;
+  background-color: var(--background-color-light);
+  background-image: url(../_assets/logo.svg);
+  background-size: 3.8rem 3.8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-right: var(--menu-border);
+}
+
+.navigation {
+  grid-area: navigation;
+}

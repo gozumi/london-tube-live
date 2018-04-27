@@ -1,0 +1,46 @@
+@keyframes oscillate {
+	0% { 
+    width: 60px;
+    padding: 30px 0;
+    border-radius: 60px;
+    opacity: .001;
+    border: 10px solid #ffffff;
+  }
+	25% { 
+    width: 30px;
+    padding: 15px 0;
+    border-radius: 30px;
+    opacity: 1;
+    border: 5px solid #ffffff;
+  }
+	100% { 
+    width: 200px;
+    padding: 100px 0;
+    border-radius: 200px;
+    opacity: .001;
+    border: 10px solid #ffffff;
+  }
+}
+
+.waiting {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waiting-ripple {
+  position: absolute;
+  height: 0;
+  background: transparent;
+  color: #ffffff;
+  animation-name: oscillate;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: cubic-bezier(); */
+}

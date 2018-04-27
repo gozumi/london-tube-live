@@ -1,0 +1,15 @@
+.home {
+  position: relative;
+  padding: 1rem 2rem 1rem 2rem;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "notifications";
+  grid-template-rows: 2.5rem auto;
+}
+
+.home__header {
+  grid-area: header;
+  margin: 0;
+}
+

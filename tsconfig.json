@@ -1,13 +1,19 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es6",
-    "jsx": "react"
-  },
-  "include": [
-    "./src/**/*"
-  ]
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es6",
+        "jsx": "react"
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+      "node-modules",
+      "**/*.spec.ts",
+      "**/*.spec.tsx"
+    ]
 }
