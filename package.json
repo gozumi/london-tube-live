@@ -113,5 +113,8 @@
     "moduleNameMapper": {
       "\\.(css|jpg|jpeg|png|gif|svg)": "<rootDir>/src/__mocks__/__file_mock__.ts"
     }
+  },
+  "engines": {
+    "node": "10.0.0"
   }
 }
