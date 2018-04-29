@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node ./dist/server/index.js",
     "start-local": "NODE_ENV=development nodemon --config nodemon.json",
-    "build": "rm -rf dist && tsc && yarn build-client",
+    "build": "webpack --config webpack.config.ts",
+    "clean-build-folder": "rm -rf dist",
+    "transpile": "tsc",
     "lint": "tslint --project tsconfig.json -c tslint.json",
     "build-client": "webpack --config webpack.config.ts",
     "serve": "NODE_ENV=development webpack-dev-server --config webpack.config.ts",
