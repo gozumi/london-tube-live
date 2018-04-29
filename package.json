@@ -9,7 +9,7 @@
     "start-local": "NODE_ENV=development nodemon --config nodemon.json",
     "build": "webpack --config webpack.config.ts",
     "clean-build-folder": "rm -rf dist",
-    "transpile": "tsc",
+    "transpile": "tsc --project tsconfig.json",
     "lint": "tslint --project tsconfig.json -c tslint.json",
     "build-client": "webpack --config webpack.config.ts",
     "serve": "NODE_ENV=development webpack-dev-server --config webpack.config.ts",
