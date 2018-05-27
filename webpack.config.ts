@@ -1,3 +1,4 @@
+import * as CleanWebpackPlugin from 'clean-webpack-plugin'
 import * as CopyWebpackPlugin from 'copy-webpack-plugin'
 import * as HtmlWebpackPlugin from 'html-webpack-plugin'
 import * as path from 'path'
@@ -35,6 +36,9 @@ const config: webpack.Configuration = {
 
       {
         enforce: 'pre',
+        exclude: [
+          path.join(process.cwd(), 'node_modules')
+        ],
         loader: 'source-map-loader',
         test: /\.js$/
       },
@@ -89,9 +93,11 @@ const config: webpack.Configuration = {
       API_URL_BASE: process.env.NODE_ENV === 'development' ?
         JSON.stringify('http://localhost:5000/') : JSON.stringify('/')
     }),
+    new CleanWebpackPlugin(['dist/public']),
     new CopyWebpackPlugin([
       { from: './src/client/manifest.json' },
       { from : './src/client/_assets' }
+      // xxx{ from: './src/client/notifications.json' }
     ])
     // new InjectManifest({
     //   // include: [/\.(html|css|png)$/],
