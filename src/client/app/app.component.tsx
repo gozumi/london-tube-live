@@ -7,9 +7,9 @@ import { Provider } from 'react-redux'
 import { HashRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 
 import Home from './features/home/home.component'
-import { getPlayerStats } from './state/action-creators/player-stats'
+import { startListeningForStatusInformation } from './state/action-creators/status-information'
 
-store.dispatch(getPlayerStats())
+store.dispatch(startListeningForStatusInformation())
 
 export default class App extends React.Component<{}, {}> {
   public render () {

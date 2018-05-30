@@ -1,1 +1,1 @@
-web: yarn clean-build-folder && yarn transpile && yarn build && yarn start
+web: yarn build && yarn start

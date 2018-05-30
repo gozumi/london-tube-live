@@ -1,9 +1,9 @@
 import './partition-layout.component.css'
 
+import { IPartitionHierarchy, NodeHandler, renderD3PartitionLayout } from 'interactive-partition-layout'
 import * as React from 'react'
 
-import { IPartitionHierarchy, NodeHandler } from './d3/_interfaces'
-import { renderD3PartitionLayout } from './d3/partition-layout'
+// xximport { IPartitionHierarchy, NodeHandler } from './d3/_interfaces'
 
 /* tslint:disable:max-line-length */
 export interface IPartitionLayoutProps {

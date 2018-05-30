@@ -1,27 +1,21 @@
-# compiled output
-/dist
-
 # dependencies
-/node_modules
+node_modules/
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# build
+dist/
 
-# misc
-/.sass-cache
-npm-debug.log*
+# generated reports & docs
+coverage/
+docs/
+reports/
 
-#System Files
+# SonarQube analysis files
+.scannerwork/
+.sonar/
+
+# system files
 .DS_Store
 Thumbs.db
 
-# generated reports & docs
-/docs
-/reports
-
-# SonarQube
-/.sonar
+# error logs
+yarn-error.log

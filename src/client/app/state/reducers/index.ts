@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import playerStatsReducer from './player-stats'
+import statusInformationReducer from './status-information'
 
 const rootReducer = combineReducers({
-  playerStats: playerStatsReducer
+  statusInformation: statusInformationReducer
 })
 
 export default rootReducer
